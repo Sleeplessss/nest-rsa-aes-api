@@ -28,10 +28,11 @@ Error codes: `VALIDATION_ERROR` (400), `DECRYPT_FAILED` (400), `ENCRYPT_FAILED` 
 ```bash
 npm install
 
-# RSA keys: put private.pem / public.pem into ./keys
-#  - generate at https://cryptotools.net/rsagen (2048 bit), or
-#  - run: npm run gen:keys
-# Demo keys are already included in ./keys so the project runs out of the box.
+# RSA keys: ./keys/private.pem and ./keys/public.pem
+#  - The included keys were generated at https://cryptotools.net/rsagen (2048 bit),
+#    so the project runs out of the box.
+#  - To use your own: generate at https://cryptotools.net/rsagen and paste the
+#    "Private Key" / "Public Key" into those two files (or run: npm run gen:keys)
 
 npm run build
 npm start              # production build  -> http://localhost:3000
@@ -86,4 +87,4 @@ src/
 test/app.e2e-spec.ts          e2e tests
 ```
 
-> The keys in `./keys` are for demo only. Use your own keys and keep the private key out of source control in a real deployment.
+> The keys in `./keys` (from cryptotools.net/rsagen) are for demo only. Use your own keys and keep the private key out of source control in a real deployment.
